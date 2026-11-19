@@ -1,0 +1,88 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Leonida Trophy Guide — GTA VI (PS5)</title>
+<meta name="description" content="Offline guide and tracker for the 55 PlayStation 5 trophies of Grand Theft Auto VI: roadmap to the platinum, missable warnings, and a cited guide for every trophy.">
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+<header class="masthead">
+  <div class="masthead-text">
+    <p class="kicker">Grand Theft Auto VI &middot; PlayStation 5 &middot; Unofficial fan guide</p>
+    <h1>Leonida Trophy Guide</h1>
+    <p class="lede">Every one of the 55 trophies — official name, description and grade, a guide in our own words with its sources, a roadmap to the platinum, and one missable warning. Tick trophies off as you earn them; your progress stays in this browser.</p>
+  </div>
+  <div class="progress-card" id="progressCard">
+    <p class="progress-big"><span id="earnedCount">0</span><span class="of"> / 55 earned</span></p>
+    <div class="bar" role="progressbar" aria-label="Trophies earned" aria-valuemin="0" aria-valuemax="55" aria-valuenow="0" id="progressBar"><span id="progressFill"></span></div>
+    <p class="progress-sub" id="progressSub">0 bronze &middot; 0 silver &middot; 0 gold &middot; platinum locked</p>
+    <p class="progress-sub" id="progressNext">Next up: finish Chapter 1 — and meditate with Lucia before it ends.</p>
+  </div>
+</header>
+
+<section class="missable-banner" id="missableBanner" aria-label="Missable trophy warning">
+  <h2>&#9888; One trophy can be missed</h2>
+  <p><strong>Positive Mental Attitude</strong> (meditate at every spot across Leonida) is the only trophy PowerPyx and GTABase flag as potentially missable. In Chapter 1, the morning after the mission <em>Down to Earth</em>, talk to Lucia in the kitchen — she says she is going to meditate. Follow her to the balcony and choose <em>Accept</em>. That session is gone after Chapter 1, and the game has <strong>no mission replay</strong>, so keep a manual save at the start of every chapter. It is unconfirmed whether that first session is required — doing it is the safe choice.</p>
+  <p class="cite">Source: <a href="https://www.powerpyx.com/gta-6-grand-theft-auto-vi-trophy-guide-roadmap/">PowerPyx — GTA 6 Trophy Guide &amp; Roadmap</a></p>
+</section>
+
+<section class="controls" aria-label="Tracker controls">
+  <div class="control-row">
+    <label class="search">Search <input id="search" type="search" placeholder="Trophy, mission or keyword…" autocomplete="off"></label>
+    <label>Kind
+      <select id="kind">
+        <option value="all">All kinds</option>
+        <option value="story">Story</option>
+        <option value="missable">Missable</option>
+        <option value="collectibles">Collectibles</option>
+        <option value="activities">Activities</option>
+        <option value="online">Online</option>
+      </select>
+    </label>
+    <label>Grade
+      <select id="grade">
+        <option value="all">All grades</option>
+        <option value="platinum">Platinum</option>
+        <option value="gold">Gold</option>
+        <option value="silver">Silver</option>
+        <option value="bronze">Bronze</option>
+      </select>
+    </label>
+    <label class="check"><input id="spoilers" type="checkbox"> Hide story spoilers</label>
+    <label class="check"><input id="hideEarned" type="checkbox"> Hide earned</label>
+  </div>
+  <div class="control-row">
+    <button id="export" type="button">Export progress (.json)</button>
+    <label class="import-btn">Import progress <input id="import" type="file" accept="application/json,.json"></label>
+    <button id="reset" type="button">Reset progress</button>
+    <p class="count" id="listCount" aria-live="polite"></p>
+  </div>
+  <p class="online-note" id="onlineNote" hidden>No online trophies exist in the official list — all 55 unlock in single-player, offline. (PowerPyx: Online Trophies 0.)</p>
+</section>
+
+<main>
+  <ol class="trophy-list" id="trophyList"></ol>
+  <p class="empty" id="emptyState" hidden>No trophies match these filters. Try clearing the search or choosing another kind.</p>
+</main>
+
+<section class="roadmap" id="roadmap" aria-label="Roadmap to the platinum">
+  <h2>Roadmap to the platinum — about 200 hours, difficulty 4/10</h2>
+  <p class="roadmap-intro">One playthrough is enough, there are no online trophies and no difficulty settings. PowerPyx splits the run into three steps; this guide adds a preparation step and a money step so nothing is left for a blind mop-up. <span class="cite">Roadmap: <a href="https://www.powerpyx.com/gta-6-grand-theft-auto-vi-trophy-guide-roadmap/">PowerPyx</a></span></p>
+  <ol class="stages" id="stages"></ol>
+</section>
+
+<footer>
+  <h2>Sources &amp; notes</h2>
+  <ul>
+    <li>Trophy names, descriptions and grades are as PlayStation publishes them, as listed by Exophase and PSNProfiles (the two agree on every name, description and grade). 28 of the 55 are hidden on PlayStation until earned.</li>
+    <li>Roadmap, missable warning, time estimate (~200 hours), difficulty (4/10), no mission replay, and the 100% completion details: <a href="https://www.powerpyx.com/gta-6-grand-theft-auto-vi-trophy-guide-roadmap/">PowerPyx — GTA 6 Trophy Guide &amp; Roadmap</a>.</li>
+    <li>Full list with grades and the Chapter 1 meditation warning: <a href="https://outputlag.com/guides/gta-6-trophy-list/">Output Lag — GTA 6 Trophy List</a>; 100% checklist thresholds: <a href="https://cryptogames.gg/gta-6-100-completion-checklist/">CryptoGames — GTA 6 100% Completion Checklist</a>; overview: <a href="https://www.gtavibes.com/guides/gta-6-trophy-list-achievements">GTA Vibes — GTA 6 Trophy List</a>.</li>
+    <li>Every guide above is written in our own words for this guide. Sources are cited beside each trophy; their text is never copied. Where the exact steps are still unconfirmed, the guide says so instead of guessing.</li>
+    <li>Unofficial fan guide. Not affiliated with Rockstar Games or PlayStation. No Rockstar logo, artwork or game screenshots are used. Progress is stored only in this browser (localStorage) and never leaves it except through the export file you choose to save.</li>
+  </ul>
+</footer>
+<script type="module" src="app.js"></script>
+</body>
+</html>
